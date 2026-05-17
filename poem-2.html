@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poem by Joe Finberg">
+    <meta name="author" content="Joe Finberg">
+    <title>The Fog - Joe Finberg</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="(function(b){var d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',d?'dark':'light');}catch(e){}b.textContent=d?'[light]':'[dark]';})(this)"></button>
+    <script>
+        (function () {
+            var btn = document.querySelector('.theme-toggle');
+            if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '[light]' : '[dark]';
+        })();
+    </script>
+
+    <nav class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="writing.html">Writing</a> / The Fog
+    </nav>
+
+    <main class="container">
+        <article class="content poem-content">
+            <h1>The Fog</h1>
+            <p class="poem-meta">Fall 2014</p>
+
+            <div class="poem">
+                <p>
+                    I want a black glass chandelier she says.
+                </p>
+                <p>
+                    I like it when it's foggy. It's romantic.
+                </p>
+                <p>
+                    I like night time when the sky is clear
+                </p>
+                <p>
+                    I like wrought iron gates with glass she says
+                </p>
+                <p>
+                    I like the fact that you're a photographer.
+                </p>
+                <p>
+                    You're very photogenic.
+                </p>
+                <p>
+                    It's scary when it rains.
+                </p>
+                <p>
+                    Your typewriter is quite quaint.
+                </p>
+                <p>
+                    All the real men are gone now, she says.
+                </p>
+                <p>
+                    I like old things. Old things are nice.
+                </p>
+                <p>
+                    Character. That's what makes a person.
+                </p>
+                <p>
+                    You don't find yourself, you make yourself.
+                </p>
+                <p>
+                    My house is full of wires and LED lights now
+                </p>
+                <p>
+                    And I can't stand modern art
+                </p>
+                <p>
+                    I don't think I like anime anymore
+                </p>
+                <p>
+                    My favorite room is the one with exposed pipes.
+                </p>
+                <p>
+                    It's too quiet now.
+                </p>
+                <p>
+                    I miss old things
+                </p>
+                <p>
+                    I miss the fog
+                </p>
+            </div>
+
+            <div class="poem-footer">
+                <a href="writing.html" class="back-link">&larr; Back to Writing</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Joe Finberg. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poems and writings by Joe Finberg">
+    <meta name="author" content="Joe Finberg">
+    <title>Writing - Joe Finberg</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="(function(b){var d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',d?'dark':'light');}catch(e){}b.textContent=d?'[light]':'[dark]';})(this)"></button>
+    <script>
+        (function () {
+            var btn = document.querySelector('.theme-toggle');
+            if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '[light]' : '[dark]';
+        })();
+    </script>
+
+    <nav class="breadcrumb">
+        <a href="index.html">Home</a> / Writing
+    </nav>
+
+    <main class="container">
+        <article class="content">
+            <h1>Writing</h1>
+
+            <section class="poem-preview">
+                <h2><a href="poem-1.html">The Unfinished Epistle</a></h2>
+                <p class="poem-meta">or A Long Ending in Couplets</p>
+                <p class="excerpt">
+                    "Still burns my breast when midnight bells are told, / And passion wrests the reins from reason's hold; / Not cloister'd nuns more anxiously would pray, / Than I, who kneel, yet teach my heart to stray..."
+                </p>
+                <a href="poem-1.html" class="read-more">Read full poem &rarr;</a>
+            </section>
+
+            <section class="poem-preview">
+                <h2><a href="poem-2.html">The Fog</a></h2>
+                <p class="poem-meta">Fall 2014</p>
+                <p class="excerpt">
+                    "I want a black glass chandelier she says. / I like it when it's foggy. It's romantic. / I like night time when the sky is clear..."
+                </p>
+                <a href="poem-2.html" class="read-more">Read full poem &rarr;</a>
+            </section>
+
+            <section class="poem-preview">
+                <h2><a href="https://arxiv.org/abs/2508.14312" target="_blank" rel="noopener noreferrer">Remarks on the Fundamentals of Time</a></h2>
+                <p class="poem-meta">oder die Zeitdämmerung | arXiv:2508.14312</p>
+                <p class="excerpt">
+                    This paper argues that the common identification of time with entropy is a category error. Entropy accounts for the arrow of time but not for time itself. Even in a maximally entropic universe the so called heat death temporal structure persists, grounded in the correlations of the quantum vacuum and the geometry of spacetime. The twilight of time is not its disappearance but its loss of directionality.
+                </p>
+                <a href="https://arxiv.org/abs/2508.14312" target="_blank" rel="noopener noreferrer" class="read-more">Read on arXiv &rarr;</a>
+            </section>
+
+            <section class="poem-preview">
+                <h2><a href="https://arxiv.org/abs/2412.07725" target="_blank" rel="noopener noreferrer">A Unified Hamiltonian Formulation for Energy Loss, Entropy Evolution, and Fusion Performance in Plasmas</a></h2>
+                <p class="poem-meta">arXiv:2412.07725</p>
+                <p class="excerpt">
+                    We develop a comprehensive Hamiltonian formulation for plasma dynamics that unifies collisionless gyrokinetic and collisional processes. Our framework rigorously describes the evolution of free energy and entropy during the transition from Maxwellian to non-Maxwellian distributions, explicitly coupling microscopic turbulent processes with macroscopic measures of energy confinement and fusion performance.
+                </p>
+                <a href="https://arxiv.org/abs/2412.07725" target="_blank" rel="noopener noreferrer" class="read-more">Read on arXiv &rarr;</a>
+            </section>
+
+            <section class="book-section">
+                <h2>Published Work</h2>
+                <p>
+                    <a href="https://www.amazon.com/False-Vacuum-Joseph-S-Finberg/dp/B0G27KSR16" target="_blank" rel="noopener noreferrer">False Vacuum (Novel)</a>
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Joe Finberg. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joe Finberg — CEO of Laurelin Technologies. Personal site, writing, and publications.">
+    <meta name="keywords" content="Joe Finberg, Laurelin Technologies, fusion energy, Oxford, Columbia, False Vacuum">
+    <meta name="author" content="Joe Finberg">
+
+    <meta property="og:title" content="Joe Finberg">
+    <meta property="og:description" content="CEO of Laurelin Technologies. Writes fiction and poetry.">
+    <meta property="og:type" content="website">
+
+    <title>Joe Finberg</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="(function(b){var d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',d?'dark':'light');}catch(e){}b.textContent=d?'[light]':'[dark]';})(this)"></button>
+    <script>
+        (function () {
+            var btn = document.querySelector('.theme-toggle');
+            if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '[light]' : '[dark]';
+        })();
+    </script>
+
+    <main class="container">
+        <header class="masthead">
+            <div class="masthead-text">
+                <h1>Joe Finberg</h1>
+                <p class="affiliation">
+                    CEO, <a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">Laurelin Technologies</a>
+                    · Columbia &amp; Oxford · San Francisco
+                </p>
+            </div>
+            <img src="images/joe-finberg-profile.jpg" alt="Joe Finberg" class="profile-photo">
+        </header>
+
+        <section class="intro">
+            <p>
+                I'm building <a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">Laurelin Technologies</a>,
+                a containerized pulsed 2H fusion reactor. Before this, four years of fusion-energy
+                research and six in quantitative trading. I studied physics and philosophy at Columbia and Oxford.
+            </p>
+            <p>
+                I also write — poetry, essays, and science fiction. My novel <em>False Vacuum</em> came out in 2025.
+            </p>
+        </section>
+
+        <hr class="rule">
+
+        <section class="section">
+            <h2>Work</h2>
+            <ul>
+                <li><a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">Laurelin Technologies</a> — pulsed 2H fusion reactor program</li>
+            </ul>
+        </section>
+
+        <hr class="rule">
+
+        <section class="section">
+            <h2>Publications</h2>
+            <ul>
+                <li>
+                    <a href="files/laurelin-whitepaper.pdf" target="_blank" rel="noopener noreferrer">The petrodollar architecture, deuterium fusion, and the case for direct-conversion compact pulsed FRC</a>
+                    (Laurelin Technologies, May 2026) — the political-economy case for 2H fusion as a terminal-fuel substrate, and the architectural commitments that compose into a viable program. [PDF]
+                </li>
+                <li><a href="https://arxiv.org/abs/2508.14312" target="_blank" rel="noopener noreferrer">Remarks on the Fundamentals of Time</a> (arXiv:2508.14312)</li>
+                <li><a href="https://arxiv.org/abs/2412.07725" target="_blank" rel="noopener noreferrer">A Unified Hamiltonian Formulation for Plasmas</a> (arXiv:2412.07725)</li>
+            </ul>
+        </section>
+
+        <hr class="rule">
+
+        <section class="section">
+            <h2>Writing</h2>
+            <ul>
+                <li><a href="writing.html">Poems &amp; Essays</a></li>
+                <li><em>False Vacuum</em> (novel, 2025) — <a href="https://www.amazon.com/False-Vacuum-Joseph-S-Finberg/dp/B0G27KSR16" target="_blank" rel="noopener noreferrer">Amazon</a></li>
+            </ul>
+        </section>
+
+        <hr class="rule">
+
+        <section class="section">
+            <h2>Elsewhere</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/joe-finberg-a54762204/" target="_blank" rel="noopener noreferrer">LinkedIn</a> (CV &amp; experience)</li>
+                <li><a href="https://x.com/joefinberg" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+                <li><a href="https://www.instagram.com/fine.structure.constant/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Joe Finberg</p>
+    </footer>
+</body>
+</html>
