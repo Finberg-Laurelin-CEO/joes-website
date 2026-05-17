@@ -22,6 +22,8 @@
     --faint: #aaaaaa;
     --rule: #000000;
     --border: #000000;
+    --link: #1155cc;
+    --link-hover: #0a3d91;
 }
 
 html.dark {
@@ -31,6 +33,8 @@ html.dark {
     --faint: #555555;
     --rule: #e8e8e8;
     --border: #e8e8e8;
+    --link: #6eb3ff;
+    --link-hover: #99ccff;
 }
 
 /* ===================================
@@ -108,14 +112,14 @@ p {
 }
 
 a {
-    color: var(--text);
+    color: var(--link);
     text-decoration: underline;
     text-underline-offset: 2px;
-    transition: opacity 0.2s ease;
+    transition: color 0.15s ease;
 }
 
 a:hover {
-    opacity: 0.55;
+    color: var(--link-hover);
 }
 
 em {
@@ -220,10 +224,12 @@ li {
 }
 
 .breadcrumb a {
+    color: var(--link);
     text-decoration: none;
 }
 
 .breadcrumb a:hover {
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
@@ -287,10 +293,12 @@ li {
 }
 
 .poem-preview h2 a {
+    color: var(--link);
     text-decoration: none;
 }
 
 .poem-preview h2 a:hover {
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
@@ -301,11 +309,13 @@ li {
 }
 
 .read-more {
+    color: var(--link);
     font-weight: normal;
     text-decoration: none;
 }
 
 .read-more:hover {
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
@@ -314,10 +324,12 @@ li {
 }
 
 .back-link {
+    color: var(--link);
     text-decoration: none;
 }
 
 .back-link:hover {
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
