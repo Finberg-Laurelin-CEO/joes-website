@@ -356,6 +356,157 @@ footer {
 }
 
 /* ===================================
+   Homepage (jdcarson-style directory)
+   =================================== */
+
+/* extra bottom padding so the fixed marquee never covers content */
+body.home {
+    padding-bottom: 64px;
+}
+
+.wordmark {
+    display: block;
+    text-align: center;
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    text-decoration: none;
+    padding-bottom: 1.75rem;
+}
+
+.wordmark:hover {
+    color: var(--text);
+}
+
+/* two-column: nested list on the left, photo + caption on the right */
+.home-wrap {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    line-height: 1.35;
+}
+
+.home-list {
+    flex: 1 1 60%;
+    min-width: 0;
+}
+
+/* top-level categories: wittgenstein / tractatus numbering (1, 2, ...) */
+.home-index {
+    list-style: none;
+    counter-reset: sec;
+    padding-left: 0;
+    margin: 0;
+}
+
+.home-index > li {
+    counter-increment: sec;
+    position: relative;
+    padding-left: 2.2em;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.home-index > li::before {
+    content: counter(sec);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.home-index > li:last-child {
+    margin-bottom: 0;
+}
+
+/* highlights under each category: decimal sub-numbering (1.1, 1.2, ...) */
+.home-index ol {
+    list-style: none;
+    counter-reset: sub;
+    padding-left: 0.4em;
+    margin: 0.2rem 0 0;
+}
+
+.home-index ol li {
+    counter-increment: sub;
+    position: relative;
+    padding-left: 2.6em;
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 0.1rem;
+    line-height: 1.4;
+}
+
+.home-index ol li::before {
+    content: counter(sec) "." counter(sub);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.home-index ol li:last-child {
+    margin-bottom: 0;
+}
+
+.home-index ol li a {
+    color: var(--link);
+}
+
+.home-list sup {
+    font-size: 0.7em;
+}
+
+.home-pic {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.home-pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid var(--border);
+    filter: grayscale(100%);
+}
+
+.home-caption {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--muted);
+    text-align: left;
+    padding-top: 0.9rem;
+}
+
+/* fixed scrolling footer marquee */
+.marquee {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 7px 0;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee-scroll 60s linear infinite;
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee span { animation: none; padding-left: 1rem; }
+}
+
+/* ===================================
    Responsive
    =================================== */
 
@@ -375,5 +526,34 @@ footer {
 
     h1 {
         font-size: 1.85rem;
+    }
+
+    /* stack the homepage; float photo + caption to the top */
+    .home-wrap {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .home-pic {
+        order: -1;
+        flex: none;
+        width: 100%;
+    }
+
+    .home-pic img {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .home-caption {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .home-list {
+        flex: none;
+        width: 100%;
     }
 }

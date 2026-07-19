@@ -27,7 +27,7 @@
 
     <title>Joe Finberg | CEO, Laurelin Technologies · Writer &amp; Physicist</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=5">
 
     <script>
         (function () {
@@ -74,7 +74,7 @@
     }
     </script>
 </head>
-<body>
+<body class="home">
     <button class="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="(function(b){var d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',d?'dark':'light');}catch(e){}b.textContent=d?'[light]':'[dark]';})(this)"></button>
     <script>
         (function () {
@@ -83,61 +83,78 @@
         })();
     </script>
 
-    <main class="container">
-        <header class="masthead">
-            <div class="masthead-text">
-                <h1>Joe Finberg</h1>
-                <p class="affiliation">
-                    CEO, <a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">Laurelin Technologies</a>
-                    · Columbia &amp; Oxford · San Francisco
-                </p>
+    <a href="index.html" class="wordmark">JOE FINBERG</a>
+
+    <div class="home-wrap">
+        <div class="home-list">
+            <ol class="home-index">
+                <li>
+                    <a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">laurelin</a>
+                    <ol>
+                        <li>containerized pulsed <sup>2</sup>H fusion reactor</li>
+                        <li>four years of fusion-energy research, six in quantitative trading</li>
+                        <li><a href="https://laurelin-inc.com/notes/whitepaper" target="_blank" rel="noopener noreferrer">the petrodollar architecture &amp; the case for deuterium fusion</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="https://frege.dev" target="_blank" rel="noopener noreferrer">frege</a>
+                    <ol>
+                        <li>a governed organizational memory for teams running multiple ai agents</li>
+                        <li>scoped, cited context and reviewable updates, over mcp &mdash; not locked to one model</li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="portfolio/">poetry</a>
+                    <ol>
+                        <li><a href="poem-1.html">the unfinished epistle</a></li>
+                        <li><a href="poem-2.html">the fog</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="portfolio/#publications">science</a>
+                    <ol>
+                        <li><a href="https://arxiv.org/abs/2412.07725" target="_blank" rel="noopener noreferrer">a unified hamiltonian formulation for fusion plasmas</a> (arxiv '24)</li>
+                        <li>lynden-bell relaxation in magnetized plasmas (i&ndash;iv)</li>
+                        <li><a href="https://doi.org/10.13140/RG.2.2.15786.68807" target="_blank" rel="noopener noreferrer">on large-N sparse CFTs and emergent gravity</a></li>
+                        <li><a href="https://arxiv.org/abs/2508.14312" target="_blank" rel="noopener noreferrer">remarks on the fundamentals of time</a></li>
+                        <li><a href="portfolio/#publications">earlier work</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="https://a.co/d/0dGjxKbk" target="_blank" rel="noopener noreferrer">book</a>
+                    <ol>
+                        <li><em>false vacuum: die zeitedämmerung</em> (novel, 2026)</li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="portfolio/">portfolio</a>
+                    <ol>
+                        <li>poems, essays, fiction, and the full list of publications</li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/joe-finberg-a54762204/" target="_blank" rel="noopener noreferrer">links</a>
+                    <ol>
+                        <li><a href="https://www.linkedin.com/in/joe-finberg-a54762204/" target="_blank" rel="noopener noreferrer">linkedin</a> (cv &amp; experience)</li>
+                        <li><a href="https://x.com/joefinberg" target="_blank" rel="noopener noreferrer">twitter / x</a></li>
+                        <li><a href="https://www.instagram.com/fine.structure.constant/" target="_blank" rel="noopener noreferrer">instagram</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="home-pic">
+            <img src="images/joe-finberg-profile.jpg" alt="Joe Finberg, CEO of Laurelin Technologies">
+            <div class="home-caption">
+                ceo of laurelin technologies, building a containerized deuterium
+                fusion reactor. physics and philosophy at columbia and oxford.
+                periodically writing poems, essays, and one quantum farce of a novel.
             </div>
-            <img src="images/joe-finberg-profile.jpg" alt="Joe Finberg, CEO of Laurelin Technologies" class="profile-photo" width="140" height="140">
-        </header>
+        </div>
+    </div>
 
-        <section class="intro">
-            <p>
-                I'm Joe Finberg, building <a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">Laurelin Technologies</a>,
-                a containerized pulsed 2H fusion reactor. Before this, four years of fusion-energy
-                research and six in quantitative trading. I studied physics and philosophy at Columbia and Oxford.
-            </p>
-            <p>
-                I also write — poetry, essays, and science fiction. My novel <em>False Vacuum</em> came out in 2026.
-            </p>
-        </section>
-
-        <hr class="rule">
-
-        <section class="section">
-            <h2>Work</h2>
-            <ul>
-                <li><a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">Laurelin Technologies</a> — pulsed 2H fusion reactor program</li>
-            </ul>
-        </section>
-
-        <hr class="rule">
-
-        <section class="section">
-            <h2>Writing</h2>
-            <ul>
-                <li><a href="portfolio/">Portfolio</a> — poems, essays, publications, and creative work</li>
-            </ul>
-        </section>
-
-        <hr class="rule">
-
-        <section class="section">
-            <h2>Elsewhere</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/joe-finberg-a54762204/" target="_blank" rel="noopener noreferrer">LinkedIn</a> (CV &amp; experience)</li>
-                <li><a href="https://x.com/joefinberg" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
-                <li><a href="https://www.instagram.com/fine.structure.constant/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Joe Finberg</p>
-    </footer>
+    <div class="marquee" aria-hidden="true">
+        <span>joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; </span>
+    </div>
 </body>
 </html>
