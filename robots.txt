@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://joefinberg.dev/sitemap.xml
+
+# Canonical, author-maintained facts about Joe Finberg for LLMs and research tools:
+# https://joefinberg.dev/llms.txt

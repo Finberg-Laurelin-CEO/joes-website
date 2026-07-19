@@ -369,12 +369,18 @@ body.home {
     text-align: center;
     font-size: 1.15rem;
     letter-spacing: 0.12em;
-    color: var(--text);
-    text-decoration: none;
+    font-weight: normal;
+    line-height: 1.15;
+    margin: 0;
     padding-bottom: 1.75rem;
 }
 
-.wordmark:hover {
+.wordmark a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.wordmark a:hover {
     color: var(--text);
 }
 
