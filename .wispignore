@@ -1,0 +1,16 @@
+# Keep the deployed file set identical to the original wisp deploy:
+# site assets only, no repo docs or tooling files.
+.git
+.github
+.gitignore
+.wispignore
+.claude
+.gstack
+.vercel
+.DS_Store
+README.md
+QUICK_START.md
+files/README.md
+images/README.md
+# Claude Code session transcripts
+????-??-??-*-*.txt

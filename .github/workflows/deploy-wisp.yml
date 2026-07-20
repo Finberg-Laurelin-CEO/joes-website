@@ -1,0 +1,38 @@
+name: Deploy to wisp.place
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: wisp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install wispctl
+        run: npm install -g wispctl@latest
+
+      # wispctl's identity resolution is flaky under recent Node versions,
+      # so run the bundle with Bun instead of the node shebang.
+      - name: Deploy site
+        run: |
+          bun "$(npm root -g)/wispctl/dist/index.js" deploy joefinberg.selfhosted.social \
+            --path . \
+            --site joefinberg-dev \
+            --password "$WISP_APP_PASSWORD" \
+            --yes
+        env:
+          WISP_APP_PASSWORD: ${{ secrets.WISP_APP_PASSWORD }}
+
+      - name: Verify live site
+        run: |
+          sleep 10
+          curl -sSf -o /dev/null -w 'joefinberg.dev -> %{http_code}\n' https://joefinberg.dev/
