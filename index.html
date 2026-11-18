@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joe Finberg — CEO of Laurelin Technologies, fusion researcher, and author. Physics &amp; philosophy (Columbia, Oxford). Publications, portfolio, and novel False Vacuum.">
+    <meta name="description" content="Joe Finberg — CEO of Laurelin Technologies, fusion researcher, and author. Physics &amp; philosophy (Columbia, Oxford). Publications and novel False Vacuum.">
     <meta name="keywords" content="Joe Finberg, Joseph Finberg, Laurelin Technologies, fusion energy, plasma physics, False Vacuum, Columbia, Oxford, writer, physicist">
     <meta name="author" content="Joe Finberg">
     <meta name="robots" content="index, follow">
@@ -28,17 +28,8 @@
 
     <title>Joe Finberg | CEO, Laurelin Technologies · Writer &amp; Physicist</title>
 
-    <link rel="stylesheet" href="css/styles.css?v=6">
-
-    <script>
-        (function () {
-            try {
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.documentElement.classList.add('dark');
-                }
-            } catch (e) {}
-        })();
-    </script>
+        <link rel="stylesheet" href="/css/monospace/reset.css">
+    <link rel="stylesheet" href="/css/monospace/index.css">
 
     <script type="application/ld+json">
     {
@@ -76,89 +67,89 @@
         ]
     }
     </script>
+    <link rel="alternate" type="application/rss+xml" title="Joe Finberg: Posts" href="/feed.xml">
+    <style>
+      .header h1 a { color: inherit; text-decoration: none; }
+      body { background: var(--background-color); min-height: 100vh; }
+      .debug-toggle { display: none !important; }
+      .header td.width-min, .header tr:last-child td:last-child { white-space: nowrap; }
+      @media screen and (max-width: 600px) {
+        .header td.width-min, .header tr:last-child td:last-child { white-space: normal; }
+        .header td.width-min { word-break: break-all; }
+        .header .coords { font-size: 0.68rem; letter-spacing: -0.02em; }
+      }
+      #dd-plot { overflow-x: auto; }
+      .coords { color: var(--text-color-alt); white-space: nowrap; }
+      pre, code { font-variant-ligatures: none; }
+      pre { overflow-x: auto; }
+      .poem p { margin: 0 0 var(--line-height); }
+      .poem .n { display: inline-block; width: 4ch; color: var(--text-color-alt); user-select: none; }
+      #field { position: fixed; inset: 0; z-index: -1; margin: 0; overflow: hidden; pointer-events: none;
+               color: var(--text-color-alt); opacity: .3; font: inherit; line-height: var(--line-height); white-space: pre; }
+    </style>
+    <script src="/css/field.js" defer></script>
 </head>
-<body class="home">
-    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="(function(b){var d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',d?'dark':'light');}catch(e){}b.textContent=d?'[light]':'[dark]';})(this)"></button>
-    <script>
-        (function () {
-            var btn = document.querySelector('.theme-toggle');
-            if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '[light]' : '[dark]';
-        })();
-    </script>
+<body>
+<main>
+<table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <h1 class="title"><a href="/">Joe Finberg</a></h1>
+      <span class="subtitle">CEO, Laurelin Technologies</span>
+    </td>
+    <th>Page</th>
+    <td class="width-min">Home</td>
+  </tr>
+  <tr>
+    <th>Updated</th>
+    <td class="width-min"><time>2026-11-18</time></td>
+  </tr>
+  <tr>
+    <th class="width-min">Location</th>
+    <td class="width-auto">San Francisco<br><span class="coords">37.7749°N 122.4194°W</span></td>
+    <th class="width-min">Links</th>
+    <td><a href="https://github.com/Finberg-Laurelin-CEO" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://x.com/joefinberg" target="_blank" rel="noopener noreferrer">X</a> | <a href="https://www.linkedin.com/in/joe-finberg-a54762204/" target="_blank" rel="noopener noreferrer">LinkedIn</a></td>
+  </tr>
+</table>
 
-    <h1 class="wordmark"><a href="index.html">JOE FINBERG</a></h1>
+<nav id="TOC" aria-label="Site navigation">
+  <h2 id="toc-title">Contents</h2>
+  <ul>
+    <li><a href="/" aria-current="page">Home</a></li>
+    <li><a href="/projects/">Projects</a></li>
+    <li><a href="/posts/">Posts</a></li>
+    <li><a href="/now/">Now</a></li>
+    <li><a href="/publications/">Publications</a></li>
+    <li><a href="/poetry/">Poetry</a></li>
+  </ul>
+</nav>
 
-    <div class="home-wrap">
-        <div class="home-list">
-            <ol class="home-index">
-                <li>
-                    <a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">laurelin</a>
-                    <ol>
-                        <li>containerized pulsed <sup>2</sup>H fusion reactor</li>
-                        <li>four years of fusion-energy research, six in quantitative trading</li>
-                        <li><a href="https://laurelin-inc.com/notes/whitepaper" target="_blank" rel="noopener noreferrer">the petrodollar architecture &amp; the case for deuterium fusion</a></li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="https://frege.dev" target="_blank" rel="noopener noreferrer">frege</a>
-                    <ol>
-                        <li>a governed organizational memory for teams running multiple ai agents</li>
-                        <li>scoped, cited context and reviewable updates, over mcp &mdash; not locked to one model</li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="portfolio/">poetry</a>
-                    <ol>
-                        <li><a href="poem-1.html">the unfinished epistle</a></li>
-                        <li><a href="poem-2.html">the fog</a></li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="portfolio/#publications">science</a>
-                    <ol>
-                        <li><a href="https://arxiv.org/abs/2412.07725" target="_blank" rel="noopener noreferrer">a unified hamiltonian formulation for fusion plasmas</a> (arxiv '24)</li>
-                        <li>lynden-bell relaxation in magnetized plasmas (i&ndash;iv)</li>
-                        <li><a href="https://doi.org/10.13140/RG.2.2.15786.68807" target="_blank" rel="noopener noreferrer">on large-N sparse CFTs and emergent gravity</a></li>
-                        <li><a href="https://arxiv.org/abs/2508.14312" target="_blank" rel="noopener noreferrer">remarks on the fundamentals of time</a></li>
-                        <li><a href="portfolio/#publications">earlier work</a></li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="https://a.co/d/0dGjxKbk" target="_blank" rel="noopener noreferrer">book</a>
-                    <ol>
-                        <li><em>false vacuum: die zeitedämmerung</em> (novel, 2026)</li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="portfolio/">portfolio</a>
-                    <ol>
-                        <li>poems, essays, fiction, and the full list of publications</li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/joe-finberg-a54762204/" target="_blank" rel="noopener noreferrer">links</a>
-                    <ol>
-                        <li><a href="https://www.linkedin.com/in/joe-finberg-a54762204/" target="_blank" rel="noopener noreferrer">linkedin</a> (cv &amp; experience)</li>
-                        <li><a href="https://x.com/joefinberg" target="_blank" rel="noopener noreferrer">twitter / x</a></li>
-                        <li><a href="https://github.com/Finberg-Laurelin-CEO" target="_blank" rel="noopener noreferrer">github</a></li>
-                        <li><a href="https://www.instagram.com/fine.structure.constant/" target="_blank" rel="noopener noreferrer">instagram</a></li>
-                    </ol>
-                </li>
-            </ol>
-        </div>
+<section>
+  <h1 id="introduction">Introduction</h1>
+  <p>I am Joe Finberg. I run <a href="https://laurelin-inc.com" target="_blank" rel="noopener noreferrer">Laurelin Technologies</a>, where we build a containerized deuterium fusion reactor. I also built <a href="https://frege.dev" target="_blank" rel="noopener noreferrer">Frege</a>, a shared memory for teams that run many AI agents.</p>
+  <p>I studied physics and philosophy at Columbia and Oxford, and I still publish on plasma physics and the foundations of time.</p>
+  <p>I also write poems, essays, and a novel, <a href="https://a.co/d/0dGjxKbk" target="_blank" rel="noopener noreferrer"><em>False Vacuum</em></a>. This site collects that work. I put new writing in <a href="/posts/">Posts</a>.</p>
+</section>
 
-        <div class="home-pic">
-            <img src="images/joe-finberg-profile.jpg" alt="Joe Finberg, CEO of Laurelin Technologies">
-            <div class="home-caption">
-                ceo of laurelin technologies, building a containerized deuterium
-                fusion reactor. physics and philosophy at columbia and oxford.
-                periodically writing poems, essays, and one quantum farce of a novel.
-            </div>
-        </div>
-    </div>
+<section>
+  <h1>Recent posts</h1>
+  <table>
+    <thead><tr><th class="width-auto">Title</th><th class="width-min">Type</th><th class="width-min">Date</th><th class="width-min">Tags</th></tr></thead>
+    <tbody>
+      <tr><td><a href="/posts/2026-11-18-a-d-d-reactivity-calculator/">A D-D reactivity calculator</a><br><em>How often deuterium fuses, at any temperature, in your browser</em></td><td>Short</td><td><time>2026-11-18</time></td><td>fusion, plasma physics, tools</td></tr>
+      <tr><td><a href="/posts/2026-11-18-how-to-stop-a-fusion-neutron/">How to stop a fusion neutron</a><br><em>Shielding a D-D reactor, from the physics up</em></td><td>Long</td><td><time>2026-11-18</time></td><td>fusion, shielding, nuclear physics, tools</td></tr>
+      <tr><td><a href="/posts/2026-09-29-an-agent-harness-in-six-days/">An agent harness in six days</a><br><em>How Laurelin runs its AI workers</em></td><td>Short</td><td><time>2026-09-29</time></td><td>ai, agents, tools</td></tr>
+      <tr><td><a href="/posts/2026-06-24-mere-life-and-the-eclipse-of-excellence/">Mere Life and the Eclipse of Excellence</a><br><em>Apollo was the last great thing the American state would attempt for its own sake.</em></td><td>Long</td><td><time>2026-06-24</time></td><td>politics, philosophy, apollo</td></tr>
+      <tr><td><a href="/posts/2025-08-19-time-is-not-entropy/">Time is not entropy</a><br><em>Notes on &quot;Remarks on the Fundamentals of Time&quot;</em></td><td>Long</td><td><time>2025-08-19</time></td><td>philosophy, physics, time</td></tr>
+    </tbody>
+  </table>
+</section>
 
-    <div class="marquee" aria-hidden="true">
-        <span>joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; joefinberg &nbsp;&middot;&nbsp; joe finberg &nbsp;&middot;&nbsp; </span>
-    </div>
+<footer>
+  <p>&copy; 2026 Joe Finberg. Styling borrowed from <a href="https://github.com/owickstrom/the-monospace-web" target="_blank" rel="noopener noreferrer">The Monospace Web</a> by Oskar Wickstr&ouml;m (<a href="/css/monospace/LICENSE.md">MIT License</a>).</p>
+</footer>
+</main>
+<input type="checkbox" class="debug-toggle" hidden aria-hidden="true">
+<script src="/css/monospace/index.js"></script>
 </body>
 </html>

@@ -14,3 +14,12 @@ files/README.md
 images/README.md
 # Claude Code session transcripts
 ????-??-??-*-*.txt
+build.py
+content
+_posts
+__pycache__
+# portfolio hidden for now (old format)
+portfolio
+_poems
+_data
+now.py
