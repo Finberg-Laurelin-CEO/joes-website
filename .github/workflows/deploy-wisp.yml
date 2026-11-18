@@ -23,13 +23,13 @@ jobs:
       - uses: oven-sh/setup-bun@v2
 
       - name: Install wispctl
-        run: npm install -g wispctl@latest
+        run: npm install -g wispctl@2.1.2
 
       # wispctl's identity resolution is flaky under recent Node versions,
       # so run the bundle with Bun instead of the node shebang.
       - name: Deploy site
         run: |
-          bun "$(npm root -g)/wispctl/bin/wispctl.js" deploy joefinberg.selfhosted.social \
+          bun "$(npm root -g)/wispctl/bin/wispctl.js" deploy did:plc:bpcvw7rsgootj27a54z2wbzy \
             --path . \
             --site joefinberg-dev \
             --password "$WISP_APP_PASSWORD" \
