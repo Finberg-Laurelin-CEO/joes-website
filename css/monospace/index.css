@@ -26,12 +26,18 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #fff;
-    --text-color-alt: #aaa;
-    --background-color: #000;
-    --background-color-alt: #111;
+  :root:not([data-theme="light"]) {
+    --text-color: #000;
+    --text-color-alt: #111;
+    --background-color: #666666;
+    --background-color-alt: #5a5a5a;
   }
+}
+:root[data-theme="dark"] {
+    --text-color: #000;
+    --text-color-alt: #111;
+    --background-color: #666666;
+    --background-color-alt: #5a5a5a;
 }
 
 * {

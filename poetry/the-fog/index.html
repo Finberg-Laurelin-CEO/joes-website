@@ -26,6 +26,14 @@
     <meta name="twitter:description" content="CEO of Laurelin Technologies. Fusion research, writing, and publications by Joe Finberg.">
     <meta name="twitter:image" content="https://joefinberg.dev/images/joe-finberg-profile.jpg">
 
+        <script>
+    (function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t)document.documentElement.setAttribute("data-theme",t);
+    function cur(){var a=document.documentElement.getAttribute("data-theme");return a||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+    function label(b){b.textContent=cur()==="dark"?"Light mode":"Dark mode"}
+    document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("theme-toggle");if(!b)return;label(b);
+    b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}label(b)})})})();
+    </script>
+    <style>.theme-toggle{display:block;margin-top:0.4rem;font:inherit;font-size:0.8rem;padding:0 0.5ch;width:auto;cursor:pointer;color:var(--text-color);background:var(--background-color);border:var(--border-thickness,2px) solid var(--text-color)}</style>
     <title>The Fog · Joe Finberg</title>
 
         <link rel="stylesheet" href="/css/monospace/reset.css">
@@ -96,6 +104,7 @@
     <td colspan="2" rowspan="2" class="width-auto">
       <h1 class="title"><a href="/">Joe Finberg</a></h1>
       <span class="subtitle">CEO, Laurelin Technologies</span>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch light or dark mode">Dark mode</button>
     </td>
     <th>Page</th>
     <td class="width-min">Poem</td>
